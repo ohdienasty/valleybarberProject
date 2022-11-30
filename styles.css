@@ -1,0 +1,12 @@
+@font-face {
+    font-family: BlackDemo;
+    src: url(/valleybarberProject/txtFiles/BlackDemo.ttf);
+}
+
+.header {
+    display: flex;
+}
+
+.logo a.link{
+    
+}
