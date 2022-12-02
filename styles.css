@@ -1,12 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
 @font-face {
     font-family: BlackDemo;
     src: url(/valleybarberProject/txtFiles/BlackDemo.ttf);
 }
+/* Font Text Imports Up here ^ */
+
+body {
+    margin: 0;
+    background-color: black;
+    min-width: 600px;
+}
+
+.firstPg {
+    display: flex;
+    flex-direction: column;
+    background-image: url(mainBG.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    height: 100vh;
+    width: auto;
+}
 
 .header {
     display: flex;
+    background-color: #000000f6;
+    align-items: center;
+    justify-content: space-between;
+    animation: slideDown .8s ease forwards .5s;
 }
 
-.logo a.link{
+ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.sticky {
+    position: fixed;
+    width: 100%;
+	top: -2em;
+}
+
+/* #icon{
+    display: block;
+    background-image: url(gallery/icon2.gif);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: grayscale(100%);
+    height: 25px;
+    width: 12px;
+    border: 2px solid;
+} */
+
+#headerLogo{
+    flex: 1;
+    font-family: "BlackDemo", cursive;
+    font-size: 30px;
+    text-transform: uppercase;
+	color:  rgb(252, 252, 252);
+	text-shadow: 0 0 0 transparent,
+                0 0 20px #ffffffc5,
+                0 0 100px #ffffffc5,
+                0 0 200px #ffffffc5,
+                0 0 1000px #ffffffc5;
+	animation: animate 3s infinite alternate;
+}
+
+.logo, .otherLinks {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    flex-wrap: wrap;
+    position:sticky;
+}
+
+.otherLinks a {
+    color: white;
+}
+
+.otherLinks ul{
+    display: flex;
+    gap: 32px;
+    font-family: Aboreto, cursive;
+}
+
+.firstContent {
+   flex: 1;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+}
+
+.divFL, .divFR {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F6FAF9;
+    font-family: Aboreto, cursive;
+}
+
+.divFL {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 300px;    
+    animation: slideUp .8s ease forwards .5s;
+}
+
+.divFL p{
+    position: relative;
+    width: 500px;
+}
+
+.divFL h1 span{
+    font-weight: bolder;
+    color: rgb(170, 123, 4)
+}
+
+.signUp {
+    display: flex;
+    color: rgb(246, 246, 249);
+    width: 100px;
+    height:45px;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+    position: relative;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+.signUp span {
+    transition: all 0.3s;
+}
+.signUp::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: rgba(247, 247, 247, 0.483);
+    transform: scale(0.1, 1);
+}
+.signUp:hover span {
+    letter-spacing: 3px;
+}
+.signUp:hover::before {
+    opacity: 1; 
+    transform: scale(1, 1); 
     
+}
+.signUp::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.3s;
+    border-radius: 20px;
+    
+    background-color: rgba(246, 242, 242, 0.1);
+}
+.signUp:hover::after {
+    opacity: 0; 
+    transform: scale(0.1, 1);   
+    background-color: rgba(253, 252, 252, 0.192);
+}
+
+.divFL h1 {
+    font-size: 50px;
+    font-weight: bolder;
+    flex-wrap: wrap;
+    margin: 0;
+}
+.divFL p {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
+}
+.divFR {
+    display: flex;
+    background-color: gray;
+    background-image: url(gallery/tools1.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 500px;
+    border-radius: 40px;
+    box-shadow: rgba(255, 255, 255, 0.135) 0px 8px 25px; 
+    margin-right: 300px;
+    animation: slideIn 1.5s ease-in-out forwards, changeImg 20s linear infinite;
+    min-width: 500px;
+}
+/* This here ends the first page */
+
+/* This start the second page */
+.secondPg {
+    display: flex;
+    flex-direction: column;
+    font-family: Aboreto, cursive;
+    color: rgb(175, 132, 24);
+    background-color: rgb(11, 11, 11);
+}
+
+.header2{
+    text-align: center;
+    font-size: 26px;
+    font-weight: bolder;
+    margin-bottom: 35px;
+}
+
+.bigBox{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+img {
+    width: 250px;
+    height: 300px;
+    border-radius: 20px;
+    border: 2px rgb(122, 106, 12) solid;
+    filter: grayscale(50%) blur(1px);
+    cursor: pointer;
+    
+}
+img:hover{
+filter: blur(0px);
+}
+#img1:hover{
+    content: url(gallery/secondPg/cutHair.gif);
+}
+#img2:hover{
+    content: url(gallery/secondPg/trimBeard.gif);
+}
+#img3:hover{
+    content: url(gallery/secondPg/beer.gif);
+}
+#img4:hover{
+    content: url(gallery/secondPg/coffeeBisc.gif);
+}
+#img5:hover{
+    content: url(gallery/secondPg/kidsDrink.gif);
+}
+
+.text {
+    justify-content: center;
+    margin-top: 50px;
+    padding-bottom: 50px;
+    max-width: 250px;
+}
+/* This here ends the second Page */
+
+/* This here starts of third Page */
+.thirdPg{
+display: flex;
+flex-direction: column;
+background-color: #434a48;
+align-items: center;
+padding-top: 100px;
+padding-bottom: 100px;
+}
+
+.thirdPg #quote{
+display: flex;
+font-size: 36px;
+font-style: italic;
+color: wheat;
+text-align: justify;
+padding-left: 300px;
+padding-right: 300px;
+max-width: 200px;
+min-width: fit-content;
+}
+
+.thirdPg #author{
+    font-size: 40px;
+    font-family: BlackDemo, cursive;
+    font-weight: bold;
+    color: rgb(175, 132, 24);
+    
+}
+/* This here ends the Third Page */
+
+/* This here starts the Fourth Page */
+.fourthPg{ 
+    display: flex;
+    flex-direction: column;
+    background-image: url(gallery/fourthPg/fourthBg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: Aboreto, cursive;
+    font-size: 16px;
+    align-items: center;
+}
+
+.fourthPg .container{
+    display: flex;
+    align-items: center;
+    height: auto;
+    width: 60%;
+    border-radius: 20px;
+    padding: 20px 100px 20px 100px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-color: #f4f0f076;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-weight: bolder;
+}
+.left, .right{
+    display: flex;
+}
+
+.right a{
+    text-decoration: none;
+    color: #fff;
+}
+.right{
+    display: flex;
+    padding: 20px 40px 20px 40px;
+    border-radius: 20px;
+    background-color: rgb(175, 132, 24);
+}
+/* This here ends the Fourth Page */
+
+/* This here starts the footer */
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8px;
+    font-family: Aboreto, cursive;
+    color: #909090;
+    background-color: rgba(0, 0, 0, 0.413);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.footer #X{
+    font-size: 13px;
+    color: rgb(175, 132, 24);
+}
+.footer #CC{
+    color:  #434a48;
+}
+/* This here ends the footer */
+
+/* Creator Div starts here */
+.creator{
+    display: flex;
+    flex-direction: column;
+    background-image: url(creatorBg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: Aboreto, cursive;
+    font-size: 8px;
+    align-items: center;
+    color: #F6FAF9;
+    filter: blur(1px);
+}
+/* Creator Div ends here */
+
+/* This is the Animation Keyframe Section */
+
+@keyframes animate {
+	40% {
+		opacity: 1;
+	}
+	42% {
+		opacity: 0.8;
+	}
+	43% {
+		opacity: 1;
+	}
+	45% {
+		opacity: 0.3;
+	}
+	46% {
+		opacity: 1;
+	}
+}
+@keyframes changeImg {
+    0%{
+        background-image: url(gallery/tools1.jpg);
+    }
+    25%{
+        background-image: url(gallery/tools2.jpg);
+    }
+    50%{
+        background-image: url(gallery/tools3.jpg);
+    }
+    75%{
+        background-image: url(gallery/tools4.jpg);
+    }
+    100%{
+        background-image: url(gallery/tools5.jpg);
+    }
+}
+@keyframes slideUp {
+    0% {
+      transform: translateY(300px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+}
+@keyframes slideIn {
+    0% {
+      transform: translateX(500px) scale(1);
+    }
+    100% {
+      transform: translateX(0px) scale(1);
+    }
+}
+@keyframes slideDown{
+    0% {
+        transform: translateY(-100px);
+      }
+      100% {
+        transform: translateY(0px);
+      }
 }
