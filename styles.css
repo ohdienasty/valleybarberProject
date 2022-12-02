@@ -77,7 +77,8 @@ a {
 .logo, .otherLinks {
     display: flex;
     align-items: center;
-    gap: 1px;
+    gap: 10px;
+    margin: 20px 300px 20px 300px;
     flex-wrap: wrap;
     position:sticky;
 }
@@ -96,17 +97,17 @@ a {
    flex: 1;
    display: flex;
    align-items: center;
-   justify-content: center;
-   flex-wrap: wrap;
 }
 
 .divFL, .divFR {
     flex: 1;
-    display: flex;
+    display: block;
     align-items: center;
     justify-content: center;
     color: #F6FAF9;
     font-family: Aboreto, cursive;
+    gap: 32px;
+    width: auto;
 }
 
 .divFL {
